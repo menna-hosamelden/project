@@ -1,4 +1,4 @@
-<div class="form-container">
+<section class=" g-main-light rounded-4 shadow my-2 w-75 mx-auto p-3">
   <form id="donation-form" method="POST" novalidate>
     <div class="instructions mb-3">
       <p>Fill in all required fields. Fields marked with <span style="color: red;">*</span> are mandatory.</p>
@@ -6,22 +6,22 @@
 
     <div class="row">
       <div class="col-md-6 col-12 mb-3">
-        <label for="fname">Full Name<span class="asterisk">*</span></label>
+        <label for="fname">Full Name<span class="asterisk" style="color: red">*</span></label>
         <input type="text" name="fname" id="fname" class="form-control" placeholder="Enter your full name">
       </div>
 
       <div class="col-md-6 col-12 mb-3">
-        <label for="email">Email Address<span class="asterisk">*</span></label>
+        <label for="email">Email Address<span class="asterisk" style="color: red">*</span></label>
         <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email address">
       </div>
 
       <div class="col-md-6 col-12 mb-3">
-        <label for="mobile">Mobile Number<span class="asterisk">*</span></label>
+        <label for="mobile">Mobile Number<span class="asterisk" style="color: red">*</span></label>
         <input type="number" name="mobile" id="mobile" class="form-control" placeholder="Enter your mobile number">
       </div>
 
       <div class="col-md-6 col-12 mb-3">
-        <label for="country">Country<span class="asterisk">*</span></label>
+        <label for="country">Country<span class="asterisk" style="color: red">*</span></label>
         <select name="country" id="country" class="form-control">
           <option value="eg">Egypt</option>
           <option value="sa">Saudi Arabia</option>
@@ -52,7 +52,7 @@
 
     <div class="row mt-3">
       <div class="col-md-6 col-12 mb-3">
-        <label for="donation">Donate to<span class="asterisk">*</span></label>
+        <label for="donation">Donate to<span class="asterisk" style="color: red">*</span></label>
         <select name="donation" id="donation" class="form-control">
           <optgroup label="Donation Programs">
             <option value="39551">Resala Charity</option>
@@ -71,7 +71,7 @@
     </div>
 
     <div class="form-group mb-3">
-      <label for="address">Address</label>
+      <label for="address">Address<span class="asterisk" style="color: red">*</span></label>
       <textarea name="address" id="address" class="form-control" placeholder="Enter your address here"></textarea>
     </div>
 
@@ -92,4 +92,4 @@
       </button>
     </div>
   </form>
-</div>
+</section>

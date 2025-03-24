@@ -31,6 +31,7 @@ export class CartComponent implements OnInit {
       next:(res)=>{
         console.log(res);
         this.cartDetails = res.data;
+        this._CartService.cartNumber.next(res.numOfCartItems);
       },
       error:(err)=>{
         console.log(err);
@@ -43,6 +44,7 @@ export class CartComponent implements OnInit {
         console.log(res);
         if(res.message === 'success'){
           this.cartDetails = {} as Icart;
+          this._CartService.cartNumber.next(0);
         }
 
       },

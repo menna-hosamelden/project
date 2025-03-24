@@ -8,7 +8,7 @@ import { Iproduct } from '../../core/interfaces/iproduct';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductComponent, RouterLink],
+  imports: [ProductComponent, RouterLink ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

@@ -7,7 +7,6 @@ import { CategoriesService } from '../../core/services/categories.service';
 import { Icategory } from '../../core/interfaces/icategory';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CurrencyPipe } from '@angular/common';
-import { SalePipe } from '../../core/pipes/sale.pipe';
 import { TermTextPipe } from '../../core/pipes/term-text.pipe';
 import { SearchPipe } from '../../core/pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +24,6 @@ export class ProductComponent implements OnInit , OnDestroy{
  private readonly _ProductsService = inject(ProductsService);
  private readonly _CategoriesService = inject(CategoriesService);
  private readonly _CartService = inject(CartService);
-//  private readonly _ToasterService = inject(ToastrService);
  
    productList:Iproduct[] = [];
    categoriesList:Icategory[] = [];
@@ -87,7 +85,8 @@ export class ProductComponent implements OnInit , OnDestroy{
      this._CartService.addToCart(id).subscribe({
        next:(res)=>{
          console.log(res);
-        //  this._ToasterService.success(res.message , 'Preloved Attire');
+         this._CartService.cartNumber.next(res.numOfCartItems);
+         console.log(this._CartService.cartNumber);
        },
        error:(err)=>{
          console.log(err);

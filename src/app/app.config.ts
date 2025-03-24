@@ -8,8 +8,6 @@ import { routes } from '../routes';
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { headerInterceptor } from './header.interceptor';
-import { provideToastr } from 'ngx-toastr';
-
 
 
 export const appConfig: ApplicationConfig = {
@@ -19,7 +17,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     importProvidersFrom(BrowserAnimationsModule),
     provideAnimations(),
-    provideToastr()
   ]
 };
 
